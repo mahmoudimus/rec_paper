@@ -1,0 +1,56 @@
+Program Body
+{
+  int _1_PROVE = 0;
+  int n;
+  n = __VERIFIER_nondet_int();
+  int x;
+  x = 0;
+  int y;
+  y = 0;
+  int i;
+  i = 0;
+  while (i < n)
+  {
+    i = i + 1;
+    x = x + 1;
+    if ((i % 2) == 0)
+      y = y + 1;
+
+  }
+
+  if ((i % 2) == 0)
+  {
+    _1_PROVE = x == (2 * y);
+  }
+
+}
+
+Function Name:
+main
+Return Type:
+int
+Input Variables:
+{}
+Local Variables:
+{ y:int x:int _1_PROVE:int i:int n:int}
+
+Output in normal notation:
+1. Frame axioms:
+
+2. Output equations:
+y1 = y4(_N1)
+x1 = (_N1+0)
+i1 = (_N1+0)
+n1 = __VERIFIER_nondet_int2
+
+3. Other axioms:
+y4((_n1+1)) = ite(((((_n1+0)+1)%2)==0),(y4(_n1)+1),y4(_n1))
+y4(0) = 0
+(_N1>=(-(0)+__VERIFIER_nondet_int2))
+(_n1<_N1) -> ((_n1+0)<__VERIFIER_nondet_int2)
+
+4. Assumption :
+
+5. Assertion :
+ite((((_N1+0)%2)==0),((_N1+0)==(2*y4(_N1))),0)
+Strategy applied 1

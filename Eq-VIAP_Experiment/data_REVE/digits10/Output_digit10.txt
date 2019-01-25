@@ -1,0 +1,126 @@
+Program Body
+{
+  int _1_ASSUME;
+  _1_ASSUME = 0;
+  int _1_PROVE = 0;
+  int p1n;
+  int p1result;
+  p1result = 1;
+  int p2n;
+  int p2result;
+  p2result = 1;
+  int p2b;
+  p2b = 1;
+  int p2retval;
+  p2retval = -1;
+  _1_ASSUME = p1n == p2n;
+  p1n = p1n / 10;
+  while (p1n > 0)
+  {
+    p1result = p1result + 1;
+    p1n = p1n / 10;
+    if (p1n > 0)
+    {
+      p1result = p1result + 1;
+      p1n = p1n / 10;
+      if (p1n > 0)
+      {
+        p1result = p1result + 1;
+        p1n = p1n / 10;
+        if (p1n > 0)
+        {
+          p1result = p1result + 1;
+          p1n = p1n / 10;
+        }
+
+      }
+
+    }
+
+  }
+
+  while (p2b != 0)
+  {
+    if (p2n < 10)
+    {
+      p2retval = p2result;
+      p2b = 0;
+    }
+    else
+      if (p2n < 100)
+    {
+      p2retval = p2result + 1;
+      p2b = 0;
+    }
+    else
+      if (p2n < 1000)
+    {
+      p2retval = p2result + 2;
+      p2b = 0;
+    }
+    else
+      if (p2n < 10000)
+    {
+      p2retval = p2result + 3;
+      p2b = 0;
+    }
+    else
+    {
+      p2n = p2n / 10000;
+      p2result = p2result + 4;
+    }
+
+
+
+
+  }
+
+  _1_PROVE = p1result == p2retval;
+}
+
+Function Name:
+main
+Return Type:
+int
+Input Variables:
+{}
+Local Variables:
+{ p2n:int p2retval:int p1result:int p2b:int _1_PROVE:int p2result:int p1n:int _1_ASSUME:int}
+
+Output in normal notation:
+1. Frame axioms:
+
+2. Output equations:
+p2retval1 = p2retval25(_N2)
+p1result1 = p1result11(_N1)
+p2b1 = p2b25(_N2)
+p2n1 = p2n25(_N2)
+p2result1 = p2result25(_N2)
+p1n1 = p1n11(_N1)
+
+3. Other axioms:
+p1result11((_n1+1)) = ite(((p1n11(_n1)/10)>0),ite((((p1n11(_n1)/10)/10)>0),ite(((((p1n11(_n1)/10)/10)/10)>0),((((p1result11(_n1)+1)+1)+1)+1),(((p1result11(_n1)+1)+1)+1)),((p1result11(_n1)+1)+1)),(p1result11(_n1)+1))
+p1n11((_n1+1)) = ite(((p1n11(_n1)/10)>0),ite((((p1n11(_n1)/10)/10)>0),ite(((((p1n11(_n1)/10)/10)/10)>0),((((p1n11(_n1)/10)/10)/10)/10),(((p1n11(_n1)/10)/10)/10)),((p1n11(_n1)/10)/10)),(p1n11(_n1)/10))
+p1result11(0) = 1
+p1n11(0) = (p1n/10)
+(0<=-(p1n11(_N1)))
+(_n1<_N1) -> (p1n11(_n1)>0)
+p2n25((_n2+1)) = ite((p2n25(_n2)<10),p2n25(_n2),ite((p2n25(_n2)<100),p2n25(_n2),ite((p2n25(_n2)<1000),p2n25(_n2),ite((p2n25(_n2)<10000),p2n25(_n2),(p2n25(_n2)/10000)))))
+p2retval25((_n2+1)) = ite((p2n25(_n2)<10),p2result25(_n2),ite((p2n25(_n2)<100),(p2result25(_n2)+1),ite((p2n25(_n2)<1000),(p2result25(_n2)+2),ite((p2n25(_n2)<10000),(p2result25(_n2)+3),p2retval25(_n2)))))
+p2result25((_n2+1)) = ite((p2n25(_n2)<10),p2result25(_n2),ite((p2n25(_n2)<100),p2result25(_n2),ite((p2n25(_n2)<1000),p2result25(_n2),ite((p2n25(_n2)<10000),p2result25(_n2),(p2result25(_n2)+4)))))
+p2b25((_n2+1)) = ite((p2n25(_n2)<10),0,ite((p2n25(_n2)<100),0,ite((p2n25(_n2)<1000),0,ite((p2n25(_n2)<10000),0,p2b25(_n2)))))
+p2n25(0) = p2n
+p2retval25(0) = -(1)
+p2result25(0) = 1
+p2b25(0) = 1
+(p2b25(_N2)==0)
+(_n2<_N2) -> (p2b25(_n2)!=0)
+
+4. Assumption :
+(p1n==p2n)
+
+5. Assertion :
+(p1result11(_N1)==p2retval25(_N2))
+
+
+Failed

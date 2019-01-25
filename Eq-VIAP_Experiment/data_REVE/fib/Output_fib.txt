@@ -1,0 +1,86 @@
+Program Body
+{
+  int _1_ASSUME;
+  _1_ASSUME = 0;
+  int _1_PROVE = 0;
+  int p1n;
+  int p1f;
+  p1f = 0;
+  int p1g;
+  p1g = 1;
+  int p1h;
+  p1h = 0;
+  int p2n;
+  int p2f;
+  p2f = 1;
+  int p2g;
+  p2g = 1;
+  int p2h;
+  p2h = 0;
+  _1_ASSUME = p1n == p2n;
+  while (p1n > 0)
+  {
+    p1h = p1f + p1g;
+    p1f = p2g;
+    p1g = p1h;
+    p1n = p1n - 1;
+  }
+
+  while (p2n > 0)
+  {
+    p2h = p2f + p2g;
+    p2f = p2g;
+    p2g = p2h;
+    p2n = p2n - 1;
+  }
+
+  _1_PROVE = p1g == p2g;
+}
+
+Function Name:
+main
+Return Type:
+int
+Input Variables:
+{}
+Local Variables:
+{ p2g:int p2n:int p1f:int p1g:int p1h:int _1_PROVE:int p2h:int p1n:int p2f:int _1_ASSUME:int}
+
+Output in normal notation:
+1. Frame axioms:
+
+2. Output equations:
+p2g1 = p2g8(_N2)
+p2f1 = p2f8(_N2)
+p1f1 = p1f4(_N1)
+p1g1 = p1g4(_N1)
+p1h1 = p1h4(_N1)
+p2n1 = p2n8(_N2)
+p2h1 = p2h8(_N2)
+p1n1 = p1n4(_N1)
+
+3. Other axioms:
+p1h4((_n1+1)) = (p1f4(_n1)+p1g4(_n1))
+p1f4((_n1+1)) = 1
+p1g4((_n1+1)) = (p1f4(_n1)+p1g4(_n1))
+p1h4(0) = 0
+p1f4(0) = 0
+p1g4(0) = 1
+(0<=-(p1n+_N1))
+(_n1<_N1) -> (p1n-_n1)>0
+p2g8((_n2+1)) = (p2f8(_n2)+p2g8(_n2))
+p2h8((_n2+1)) = (p2f8(_n2)+p2g8(_n2))
+p2f8((_n2+1)) = p2g8(_n2)
+p2g8(0) = 1
+p2h8(0) = 0
+p2f8(0) = 1
+(0<=-(p2n+_N2))
+(_n2<_N2) -> (p2n-_n2)>0
+
+4. Assumption :
+(p1n==p2n)
+
+5. Assertion :
+(p1g4(_N1)==p2g8(_N2))
+
+Failed

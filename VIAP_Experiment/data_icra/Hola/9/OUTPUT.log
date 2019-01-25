@@ -1,0 +1,64 @@
+Program Body
+{
+  int _1_PROVE = 0;
+  int w;
+  w = 1;
+  int z;
+  z = 0;
+  int x;
+  x = 0;
+  int y;
+  y = 0;
+  while (__VERIFIER_nondet_int() > 0)
+  {
+    if (w > 0)
+    {
+      x = x + 1;
+      w = !w;
+    }
+
+    if (z <= 0)
+    {
+      y = y + 1;
+      z = !z;
+    }
+
+  }
+
+  _1_PROVE = x == y;
+}
+
+Function Name:
+main
+Return Type:
+int
+Input Variables:
+{}
+Local Variables:
+{ y:int x:int _1_PROVE:int z:int w:int}
+
+Output in normal notation:
+1. Frame axioms:
+
+2. Output equations:
+y1 = y6(_N1)
+x1 = x6(_N1)
+z1 = z6(_N1)
+w1 = w6(_N1)
+
+3. Other axioms:
+y6((_n1+1)) = ite((z6(_n1)<=0),(y6(_n1)+1),y6(_n1))
+x6((_n1+1)) = ite((w6(_n1)>0),(x6(_n1)+1),x6(_n1))
+z6((_n1+1)) = ite((z6(_n1)<=0),not z6(_n1),z6(_n1))
+w6((_n1+1)) = ite((w6(_n1)>0),not w6(_n1),w6(_n1))
+y6(0) = 0
+x6(0) = 0
+z6(0) = 0
+w6(0) = 1
+(0<=-(__VERIFIER_nondet_int2(_N1)))
+(_n1<_N1) -> (__VERIFIER_nondet_int2(_n1)>0)
+
+4. Assumption :
+
+5. Assertion :
+(x6(_N1)==y6(_N1))

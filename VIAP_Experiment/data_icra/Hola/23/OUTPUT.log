@@ -1,0 +1,55 @@
+Program Body
+{
+  int LARGE_INT;
+  int _1_ASSUME;
+  _1_ASSUME = 0;
+  int _2_ASSUME;
+  _2_ASSUME = 0;
+  int _1_PROVE = 0;
+  int n;
+  n = __VERIFIER_nondet_int();
+  int i;
+  int sum;
+  sum = 0;
+  _1_ASSUME = n >= 0;
+  _2_ASSUME = n < LARGE_INT;
+  i = 0;
+  while (i < n)
+  {
+    sum = sum + i;
+    i = i + 1;
+  }
+
+  _1_PROVE = sum >= 0;
+}
+
+Function Name:
+main
+Return Type:
+int
+Input Variables:
+{}
+Local Variables:
+{ LARGE_INT:int i:int sum:int _1_PROVE:int n:int _2_ASSUME:int _1_ASSUME:int}
+
+Output in normal notation:
+1. Frame axioms:
+LARGE_INT1 = LARGE_INT
+
+2. Output equations:
+i1 = (_N1+0)
+sum1 = ((((((2*_N1)*0)-_N1)+(2*0))+(_N1**2))/2)
+n1 = __VERIFIER_nondet_int2
+
+3. Other axioms:
+(_N1>=(-(0)+__VERIFIER_nondet_int2))
+(_n1<_N1) -> ((_n1+0)<__VERIFIER_nondet_int2)
+
+4. Assumption :
+(__VERIFIER_nondet_int2<LARGE_INT)
+(__VERIFIER_nondet_int2>=0)
+
+5. Assertion :
+(((((((2*_N1)*0)-_N1)+(2*0))+(_N1**2))/2)>=0)
+Strategy applied 1
+VIAP_STANDARD_OUTPUT_True

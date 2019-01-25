@@ -1,0 +1,80 @@
+Program Body
+{
+  int _1_ASSUME;
+  _1_ASSUME = 0;
+  int _1_PROVE = 0;
+  int p1n;
+  int p1i;
+  p1i = 1;
+  int p1j;
+  p1j = 0;
+  int p2n;
+  int p2i;
+  p2i = 1;
+  int p2j;
+  p2j = 2;
+  _1_ASSUME = p1n == p2n;
+  if (p1n < 1)
+  {
+    p1n = 1;
+  }
+
+  while (p1i <= p1n)
+  {
+    p1j = p1j + 2;
+    p1i = p1i + 1;
+  }
+
+  if (p2n < 1)
+  {
+    p2n = 1;
+  }
+
+  while (p2i < p2n)
+  {
+    p2j = p2j + 2;
+    p2i = p2i + 1;
+  }
+
+  _1_PROVE = p1j == p2j;
+}
+
+Function Name:
+main
+Return Type:
+int
+Input Variables:
+{}
+Local Variables:
+{ p2n:int p1i:int p1j:int _1_PROVE:int p2i:int p1n:int p2j:int _1_ASSUME:int}
+
+Output in normal notation:
+1. Frame axioms:
+
+2. Output equations:
+p1i1 = (_N1+1)
+p1j1 = ((2*_N1)+0)
+p2n1 = ite((p2n<1),1,p2n)
+p2i1 = (_N2+1)
+p1n1 = ite((p1n<1),1,p1n)
+p2j1 = ((2*_N2)+2)
+
+3. Other axioms:
+((_N1+1)>ite((p1n<1),1,p1n))
+(_n1<_N1) -> ((_n1+1)<=ite((p1n<1),1,p1n))
+(_N2>=(-(1)+ite((p2n<1),1,p2n)))
+(_n2<_N2) -> ((_n2+1)<ite((p2n<1),1,p2n))
+
+4. Assumption :
+(p1n==p2n)
+
+5. Assertion :
+(((2*_N1)+0)==((2*_N2)+2))
+
+
+Successfully Proved Assertion
+
+Programs are Equivalent
+
+
+

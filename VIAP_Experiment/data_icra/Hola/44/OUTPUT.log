@@ -1,0 +1,64 @@
+Program Body
+{
+  int _1_PROVE = 0;
+  int k;
+  k = __VERIFIER_nondet_int();
+  int flag;
+  flag = __VERIFIER_nondet_int();
+  int i;
+  i = 0;
+  int j;
+  j = 0;
+  int n;
+  int __BLAST_NONDET;
+  if (flag == 1)
+  {
+    n = 1;
+  }
+  else
+  {
+    n = 2;
+  }
+
+  i = 0;
+  while (i <= k)
+  {
+    i = i + 1;
+    j = j + n;
+  }
+
+  if (flag == 1)
+  {
+    _1_PROVE = j == i;
+  }
+
+}
+
+Function Name:
+main
+Return Type:
+int
+Input Variables:
+{}
+Local Variables:
+{ j:int i:int k:int _1_PROVE:int n:int __BLAST_NONDET:int flag:int}
+
+Output in normal notation:
+1. Frame axioms:
+__BLAST_NONDET1 = __BLAST_NONDET
+
+2. Output equations:
+i1 = (_N1+0)
+k1 = __VERIFIER_nondet_int2
+j1 = ((((_N1**2)-_N1)+(2*0))/2)
+flag1 = __VERIFIER_nondet_int3
+n1 = ite((__VERIFIER_nondet_int3==1),1,2)
+
+3. Other axioms:
+((_N1+0)>__VERIFIER_nondet_int2)
+(_n1<_N1) -> ((_n1+0)<=__VERIFIER_nondet_int2)
+
+4. Assumption :
+
+5. Assertion :
+ite((__VERIFIER_nondet_int3==1),(((((_N1**2)-_N1)+(2*0))/2)==(_N1+0)),0)

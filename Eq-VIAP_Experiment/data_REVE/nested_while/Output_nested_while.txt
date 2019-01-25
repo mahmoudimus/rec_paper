@@ -1,0 +1,94 @@
+Composite Program Body
+{
+  int _1_ASSUME;
+  _1_ASSUME = 0;
+  int _1_PROVE = 0;
+  int p1i;
+  p1i = 0;
+  int p1x;
+  int p1g;
+  int p2i;
+  p2i = 0;
+  int p2x;
+  int p2g;
+  _1_ASSUME = (p1x == p2x) && (p1g == p2g);
+  while (p1i < p1x)
+  {
+    p1i = p1i + 1;
+    p1g = p1g - 2;
+    p1g = p1g + 1;
+    while (p1x < p1i)
+    {
+      p1x = p1x + 2;
+      p1x = p1x - 1;
+      p1g = p1g + 1;
+    }
+
+  }
+
+  while (p2i < p2x)
+  {
+    p2i = p2i + 1;
+    p2g = p2g - 2;
+    p2g = p2g + 1;
+    while (p2x < p2i)
+    {
+      p2x = p2x + 2;
+      p2x = p2x - 1;
+      p2g = p2g + 1;
+    }
+
+  }
+
+  _1_PROVE = p1x == p2x;
+}
+
+Function Name:
+main
+Return Type:
+int
+Input Variables:
+{}
+Local Variables:
+{ p2g:int p1g:int p1i:int _1_PROVE:int p2i:int p1x:int _1_ASSUME:int p2x:int}
+
+Output in normal notation:
+1. Frame axioms:
+
+2. Output equations:
+p2g1 = p2g14(_N4)
+p1g1 = p1g7(_N2)
+p1i1 = (_N2+0)
+p2i1 = (_N4+0)
+p1x1 = p1x7(_N2)
+p2x1 = p2x14(_N4)
+
+3. Other axioms:
+(_N1(_n2)>=(((_n2+0)+1)-p1x7(_n2)))
+(_n1<_N1(_n2)) -> ((_n1+p1x7(_n2))<((_n2+0)+1))
+p1x7((_n2+1)) = (_N1(_n2)+p1x7(_n2))
+p1g7((_n2+1)) = (_N1(_n2)+((p1g7(_n2)-2)+1))
+p1x7(0) = p1x
+p1g7(0) = p1g
+(_N2>=(-(0)+p1x7(_N2)))
+(_n2<_N2) -> ((_n2+0)<p1x7(_n2))
+(_N3(_n4)>=(((_n4+0)+1)-p2x14(_n4)))
+(_n3<_N3(_n4)) -> ((_n3+p2x14(_n4))<((_n4+0)+1))
+p2g14((_n4+1)) = (_N3(_n4)+((p2g14(_n4)-2)+1))
+p2x14((_n4+1)) = (_N3(_n4)+p2x14(_n4))
+p2g14(0) = p2g
+p2x14(0) = p2x
+(_N4>=(-(0)+p2x14(_N4)))
+(_n4<_N4) -> ((_n4+0)<p2x14(_n4))
+
+4. Assumption :
+((p1x==p2x) and (p1g==p2g))
+
+5. Assertion :
+(p1x7(_N2)==p2x14(_N4))
+
+
+Successfully Proved Assertion
+
+Programs are Equivalent
+

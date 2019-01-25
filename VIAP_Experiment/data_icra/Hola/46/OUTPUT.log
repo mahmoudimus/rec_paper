@@ -1,0 +1,70 @@
+Program Body
+{
+  int LARGE_INT;
+  int _1_PROVE = 0;
+  int w;
+  w = 1;
+  int z;
+  z = 0;
+  int x;
+  x = 0;
+  int y;
+  y = 0;
+  while (((x < LARGE_INT) && (y < LARGE_INT)) && (__VERIFIER_nondet_int() > 0))
+  {
+    if ((w % 2) == 1)
+    {
+      x = x + 1;
+      w = w + 1;
+    }
+
+    if ((z % 2) == 0)
+    {
+      y = y + 1;
+      z = z + 1;
+    }
+
+  }
+
+  _1_PROVE = x <= 1;
+}
+
+Function Name:
+main
+Return Type:
+int
+Input Variables:
+{}
+Local Variables:
+{ LARGE_INT:int _1_PROVE:int w:int y:int x:int z:int}
+
+Output in normal notation:
+1. Frame axioms:
+LARGE_INT1 = LARGE_INT
+
+2. Output equations:
+y1 = y6(_N1)
+x1 = x6(_N1)
+z1 = z6(_N1)
+w1 = w6(_N1)
+
+3. Other axioms:
+y6((_n1+1)) = ite(((z6(_n1)%2)==0),(y6(_n1)+1),y6(_n1))
+x6((_n1+1)) = ite(((w6(_n1)%2)==1),(x6(_n1)+1),x6(_n1))
+z6((_n1+1)) = ite(((z6(_n1)%2)==0),(z6(_n1)+1),z6(_n1))
+w6((_n1+1)) = ite(((w6(_n1)%2)==1),(w6(_n1)+1),w6(_n1))
+y6(0) = 0
+x6(0) = 0
+z6(0) = 0
+w6(0) = 1
+(((x6(_N1)>=LARGE_INT) or (y6(_N1)>=LARGE_INT)) or (__VERIFIER_nondet_int2(_N1)<=0))
+(_n1<_N1) -> (((x6(_n1)<LARGE_INT) and (y6(_n1)<LARGE_INT)) and (__VERIFIER_nondet_int2(_n1)>0))
+
+4. Assumption :
+
+5. Assertion :
+(x6(_N1)<=1)
+Strategy applied 1
+Strategy applied 2
+Strategy applied 3
+VIAP_STANDARD_OUTPUT_True

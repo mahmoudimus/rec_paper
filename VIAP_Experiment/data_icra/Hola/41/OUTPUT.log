@@ -1,0 +1,71 @@
+Program Body
+{
+  int LARGE_INT;
+  int _1_ASSUME;
+  _1_ASSUME = 0;
+  int _2_ASSUME;
+  _2_ASSUME = 0;
+  int _3_ASSUME;
+  _3_ASSUME = 0;
+  int _1_PROVE = 0;
+  int n;
+  n = __VERIFIER_nondet_int();
+  int flag;
+  flag = __VERIFIER_nondet_int();
+  _1_ASSUME = n >= 0;
+  _2_ASSUME = n < LARGE_INT;
+  int k;
+  k = 1;
+  if (flag > 0)
+  {
+    k = __VERIFIER_nondet_int();
+    _3_ASSUME = k >= 0;
+  }
+
+  int i;
+  i = 0;
+  int j;
+  j = 0;
+  while (i <= n)
+  {
+    i = i + 1;
+    j = j + i;
+  }
+
+  int z;
+  z = (k + i) + j;
+  _1_PROVE = z > (2 * n);
+}
+
+Function Name:
+main
+Return Type:
+int
+Input Variables:
+{}
+Local Variables:
+{ LARGE_INT:int j:int i:int k:int _1_PROVE:int flag:int n:int _2_ASSUME:int _3_ASSUME:int _1_ASSUME:int z:int}
+
+Output in normal notation:
+1. Frame axioms:
+LARGE_INT1 = LARGE_INT
+
+2. Output equations:
+i1 = (_N1+0)
+k1 = ite((__VERIFIER_nondet_int3>0),__VERIFIER_nondet_int4,1)
+j1 = ((((((2*_N1)*0)+_N1)+(2*0))+(_N1**2))/2)
+n1 = __VERIFIER_nondet_int2
+flag1 = __VERIFIER_nondet_int3
+z1 = ((ite((__VERIFIER_nondet_int3>0),__VERIFIER_nondet_int4,1)+(_N1+0))+((((((2*_N1)*0)+_N1)+(2*0))+(_N1**2))/2))
+
+3. Other axioms:
+((_N1+0)>__VERIFIER_nondet_int2)
+(_n1<_N1) -> ((_n1+0)<=__VERIFIER_nondet_int2)
+
+4. Assumption :
+ite((__VERIFIER_nondet_int3>0),(__VERIFIER_nondet_int4>=0),0)
+(__VERIFIER_nondet_int2<LARGE_INT)
+(__VERIFIER_nondet_int2>=0)
+
+5. Assertion :
+(((ite((__VERIFIER_nondet_int3>0),__VERIFIER_nondet_int4,1)+(_N1+0))+((((((2*_N1)*0)+_N1)+(2*0))+(_N1**2))/2))>(2*__VERIFIER_nondet_int2))

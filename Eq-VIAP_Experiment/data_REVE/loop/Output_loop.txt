@@ -1,0 +1,73 @@
+
+Program Body
+{
+  int _1_ASSUME;
+  _1_ASSUME = 0;
+  int _1_PROVE = 0;
+  int p1n;
+  int p2n;
+  int p1i;
+  p1i = 0;
+  int p1j;
+  p1j = 0;
+  int p2i;
+  p2i = p2n;
+  int p2j;
+  p2j = 0;
+  _1_ASSUME = p1n == p2n;
+  while (p1i <= p1n)
+  {
+    p1i = p1i + 1;
+    p1j = p1j + 1;
+  }
+
+  while (p2i >= 0)
+  {
+    p2i = p2i - 1;
+    p2j = p2j + 1;
+  }
+
+  _1_PROVE = p1j == p2j;
+}
+
+Function Name:
+main
+Return Type:
+int
+Input Variables:
+{}
+Local Variables:
+{ p2n:int p1i:int p1j:int _1_PROVE:int p2i:int p1n:int p2j:int _1_ASSUME:int}
+
+Output in normal notation:
+1. Frame axioms:
+p2n1 = p2n
+p1n1 = p1n
+
+2. Output equations:
+p1i1 = (_N1+0)
+p1j1 = (_N1+0)
+p2i1 = p2i4(_N2)
+p2j1 = (_N2+0)
+
+3. Other axioms:
+((_N1+0)>p1n)
+(_n1<_N1) -> ((_n1+0)<=p1n)
+p2i4((_n2+1)) = (p2i4(_n2)-1)
+p2i4(0) = p2n
+(p2i4(_N2)<0)
+(_n2<_N2) -> (p2i4(_n2)>=0)
+
+4. Assumption :
+(p1n==p2n)
+
+5. Assertion :
+((_N1+0)==(_N2+0))
+
+
+
+Successfully Proved Assertion
+
+Programs are Equivalent
+
+

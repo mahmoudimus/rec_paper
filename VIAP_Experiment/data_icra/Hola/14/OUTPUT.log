@@ -1,0 +1,64 @@
+Program Body
+{
+  int RET;
+  RET = 0;
+  int _1_PROVE = 0;
+  int _2_PROVE = 0;
+  int a;
+  a = 0;
+  int j;
+  int m;
+  int __BLAST_NONDET;
+  m = __VERIFIER_nondet_int();
+  if (m <= 0)
+  {
+    RET = 0;
+  }
+
+  if (m > 0)
+  {
+    j = 1;
+    while (j <= m)
+    {
+      if (__VERIFIER_nondet_int() > 0)
+        a = a + 1;
+
+      j = j + 1;
+    }
+
+    _1_PROVE = a >= (-m);
+    _2_PROVE = a <= m;
+  }
+
+}
+
+Function Name:
+main
+Return Type:
+int
+Input Variables:
+{}
+Local Variables:
+{ a:int j:int _1_PROVE:int m:int RET:int __BLAST_NONDET:int _2_PROVE:int}
+
+Output in normal notation:
+1. Frame axioms:
+__BLAST_NONDET1 = __BLAST_NONDET
+
+2. Output equations:
+a1 = ite((__VERIFIER_nondet_int2>0),a4(_N1),0)
+j1 = ite((__VERIFIER_nondet_int2>0),(_N1+1),j)
+m1 = __VERIFIER_nondet_int2
+main = ite((__VERIFIER_nondet_int2<=0),0,0)
+
+3. Other axioms:
+a4((_n1+1)) = ite((__VERIFIER_nondet_int3(_n1)>0),(a4(_n1)+1),a4(_n1))
+a4(0) = 0
+((_N1+1)>__VERIFIER_nondet_int2)
+(_n1<_N1) -> ((_n1+1)<=__VERIFIER_nondet_int2)
+
+4. Assumption :
+
+5. Assertion :
+ite((__VERIFIER_nondet_int2>0),(a4(_N1)>=-(__VERIFIER_nondet_int2)),0)
+ite((__VERIFIER_nondet_int2>0),(a4(_N1)<=__VERIFIER_nondet_int2),0)

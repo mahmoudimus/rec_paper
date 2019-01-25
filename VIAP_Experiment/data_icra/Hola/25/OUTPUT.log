@@ -1,0 +1,70 @@
+Program Body
+{
+  int LARGE_INT;
+  int _1_PROVE = 0;
+  int x;
+  x = 0;
+  int y;
+  y = 0;
+  int i;
+  i = 0;
+  int j;
+  j = 0;
+  while (((x <= LARGE_INT) && (y <= LARGE_INT)) && (__VERIFIER_nondet_int() > 0))
+  {
+    while (__VERIFIER_nondet_int() > 0)
+    {
+      if (x == y)
+        i = i + 1;
+
+    }
+
+    if (i >= j)
+    {
+      x = x + 1;
+      y = y + 1;
+    }
+
+  }
+
+  _1_PROVE = i >= j;
+}
+
+Function Name:
+main
+Return Type:
+int
+Input Variables:
+{}
+Local Variables:
+{ LARGE_INT:int j:int i:int _1_PROVE:int y:int x:int}
+
+Output in normal notation:
+1. Frame axioms:
+LARGE_INT1 = LARGE_INT
+
+2. Output equations:
+i1 = i6(_N2)
+y1 = y6(_N2)
+j1 = 0
+x1 = x6(_N2)
+
+3. Other axioms:
+i2((_n1+1),_n2) = ite((x6(_n2)==y6(_n2)),(i2(_n1,_n2)+1),i2(_n1,_n2))
+i2(0,_n2) = i6(_n2)
+(0<=-(__VERIFIER_nondet_int2(_N1(_n2),_n2)))
+(_n1<_N1(_n2)) -> (__VERIFIER_nondet_int2(_n1,_n2)>0)
+i6((_n2+1)) = i2(_N1(_n2),_n2)
+y6((_n2+1)) = ite((i2(_N1(_n2),_n2)>=0),(y6(_n2)+1),y6(_n2))
+x6((_n2+1)) = ite((i2(_N1(_n2),_n2)>=0),(x6(_n2)+1),x6(_n2))
+i6(0) = 0
+y6(0) = 0
+x6(0) = 0
+(((x6(_N2)>LARGE_INT) or (y6(_N2)>LARGE_INT)) or (__VERIFIER_nondet_int3(_N2)<=0))
+(_n2<_N2) -> (((x6(_n2)<=LARGE_INT) and (y6(_n2)<=LARGE_INT)) and (__VERIFIER_nondet_int3(_n2)>0))
+
+4. Assumption :
+
+5. Assertion :
+(i6(_N2)>=0)
+Strategy applied 1

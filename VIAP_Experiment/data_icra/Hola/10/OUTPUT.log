@@ -1,0 +1,45 @@
+Program Body
+{
+  int _1_PROVE = 0;
+  int j;
+  j = 0;
+  int i;
+  int x;
+  x = 100;
+  i = 0;
+  while (i < x)
+  {
+    j = j + 2;
+    i = i + 1;
+  }
+
+  _1_PROVE = j == (2 * x);
+}
+
+Function Name:
+main
+Return Type:
+int
+Input Variables:
+{}
+Local Variables:
+{ i:int x:int _1_PROVE:int j:int}
+
+Output in normal notation:
+1. Frame axioms:
+
+2. Output equations:
+i1 = (_N1+0)
+x1 = 100
+j1 = ((2*_N1)+0)
+
+3. Other axioms:
+(_N1>=(-(0)+100))
+(_n1<_N1) -> ((_n1+0)<100)
+
+4. Assumption :
+
+5. Assertion :
+(((2*_N1)+0)==(2*100))
+Strategy applied 1
+VIAP_STANDARD_OUTPUT_True

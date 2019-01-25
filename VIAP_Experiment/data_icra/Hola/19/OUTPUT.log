@@ -1,0 +1,62 @@
+Program Body
+{
+  int _1_ASSUME;
+  _1_ASSUME = 0;
+  int _2_ASSUME;
+  _2_ASSUME = 0;
+  int _3_ASSUME;
+  _3_ASSUME = 0;
+  int _1_PROVE = 0;
+  int n;
+  n = __VERIFIER_nondet_int();
+  int m;
+  m = __VERIFIER_nondet_int();
+  _1_ASSUME = n >= 0;
+  _2_ASSUME = m >= 0;
+  _3_ASSUME = m < n;
+  int x;
+  x = 0;
+  int y;
+  y = m;
+  while (x < n)
+  {
+    x = x + 1;
+    if (x > m)
+      y = y + 1;
+
+  }
+
+  _1_PROVE = y == n;
+}
+
+Function Name:
+main
+Return Type:
+int
+Input Variables:
+{}
+Local Variables:
+{ y:int _1_PROVE:int m:int n:int _2_ASSUME:int _3_ASSUME:int _1_ASSUME:int x:int}
+
+Output in normal notation:
+1. Frame axioms:
+
+2. Output equations:
+y1 = y3(_N1)
+x1 = (_N1+0)
+m1 = __VERIFIER_nondet_int3
+n1 = __VERIFIER_nondet_int2
+
+3. Other axioms:
+y3((_n1+1)) = ite((((_n1+0)+1)>__VERIFIER_nondet_int3),(y3(_n1)+1),y3(_n1))
+y3(0) = __VERIFIER_nondet_int3
+(_N1>=(__VERIFIER_nondet_int2-0))
+(_n1<_N1) -> ((_n1+0)<__VERIFIER_nondet_int2)
+
+4. Assumption :
+(__VERIFIER_nondet_int3>=0)
+(__VERIFIER_nondet_int3<__VERIFIER_nondet_int2)
+(__VERIFIER_nondet_int2>=0)
+
+5. Assertion :
+(y3(_N1)==__VERIFIER_nondet_int2)

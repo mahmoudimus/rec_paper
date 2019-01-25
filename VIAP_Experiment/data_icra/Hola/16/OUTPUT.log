@@ -1,0 +1,52 @@
+Program Body
+{
+  int _1_PROVE = 0;
+  int i;
+  i = __VERIFIER_nondet_int();
+  int j;
+  j = __VERIFIER_nondet_int();
+  int x;
+  x = i;
+  int y;
+  y = j;
+  while (x != 0)
+  {
+    x = x - 1;
+    y = y - 1;
+  }
+
+  if (i == j)
+  {
+    _1_PROVE = y == 0;
+  }
+
+}
+
+Function Name:
+main
+Return Type:
+int
+Input Variables:
+{}
+Local Variables:
+{ i:int x:int _1_PROVE:int y:int j:int}
+
+Output in normal notation:
+1. Frame axioms:
+
+2. Output equations:
+i1 = __VERIFIER_nondet_int2
+x1 = (-(_N1)+__VERIFIER_nondet_int2)
+j1 = __VERIFIER_nondet_int3
+y1 = (-(_N1)+__VERIFIER_nondet_int3)
+
+3. Other axioms:
+((-(_N1)+__VERIFIER_nondet_int2)==0)
+(_n1<_N1) -> ((-(_n1)+__VERIFIER_nondet_int2)!=0)
+
+4. Assumption :
+
+5. Assertion :
+ite((__VERIFIER_nondet_int2==__VERIFIER_nondet_int3),((-(_N1)+__VERIFIER_nondet_int3)==0),0)
+Strategy applied 1
+VIAP_STANDARD_OUTPUT_True

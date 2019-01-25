@@ -1,0 +1,103 @@
+Program Body
+{
+  int _1_ASSUME;
+  _1_ASSUME = 0;
+  int _1_PROVE = 0;
+  int p1t;
+  int p1c;
+  int p1x;
+  p1x = 0;
+  int p2t;
+  int p2c;
+  int p2x;
+  p2x = 0;
+  _1_ASSUME = (p1t == p2t) && (p1c == p2c);
+  if (0 < p1t)
+  {
+    while (0 < p1c)
+    {
+      p1x = p1x + 1;
+      p1c = p1c - 1;
+    }
+
+  }
+  else
+  {
+    while (0 < p1c)
+    {
+      p1x = p1x - 1;
+      p1c = p1c - 1;
+    }
+
+  }
+
+  if (0 < p2t)
+  {
+    while (0 < p2c)
+    {
+      p2x = p2x + 1;
+      p2c = p2c - 1;
+    }
+
+  }
+  else
+  {
+    while (0 < p2c)
+    {
+      p2x = p2x - 1;
+      p2c = p2c - 1;
+    }
+
+  }
+
+  _1_PROVE = p1x == p2x;
+}
+
+Function Name:
+main
+Return Type:
+int
+Input Variables:
+{}
+Local Variables:
+{ p1c:int p2c:int p2t:int _1_PROVE:int p1x:int p1t:int _1_ASSUME:int p2x:int}
+
+Output in normal notation:
+1. Frame axioms:
+p2t1 = p2t
+p1t1 = p1t
+
+2. Output equations:
+p1x1 = ite((0<p1t),(_N1+0),-_N2)
+p1c1 = ite((0<p1t),p1c2(_N1),p1c-_N2)
+p2x1 = ite((0<p2t),(_N3+0),-_N4)
+p2c1 = ite((0<p2t),p2c8(_N3),p2c-_N4)
+
+3. Other axioms:
+p1c2((_n1+1)) = (p1c2(_n1)-1)
+p1c2(0) = p1c
+(0<=-p1c+_N1)
+(_n1<_N1) -> (0<p1c-_n1)
+(0<=-(p1c-_N2))
+(_n2<_N2) -> (0<p1c-_n2)
+(0<=-(p2c-_N3))
+(_n3<_N3) -> (0<p2c-_n3)
+(0<=-(p2c-_N4))
+(_n4<_N4) -> (0<p2c-_n4)
+
+
+
+Successfully Proved Assertion
+
+Programs are Equivalent
+
+
+
+4. Assumption :
+((p1t==p2t) and (p1c==p2c))
+
+5. Assertion :
+(ite((0<p1t),(_N1+0),-_N2))==ite((0<p2t),(_N3+0),-_N4)))
+
+
+

@@ -1,0 +1,64 @@
+Program Body
+{
+  int _1_PROVE = 0;
+  int k;
+  k = 100;
+  int b;
+  int i;
+  int j;
+  int n;
+  j = __VERIFIER_nondet_int();
+  b = __VERIFIER_nondet_int();
+  i = j;
+  n = 0;
+  while (n < (2 * k))
+  {
+    if (b > 0)
+    {
+      i = i + 1;
+    }
+    else
+    {
+      j = j + 1;
+    }
+
+    b = !b;
+    n = n + 1;
+  }
+
+  _1_PROVE = i == j;
+}
+
+Function Name:
+main
+Return Type:
+int
+Input Variables:
+{}
+Local Variables:
+{ b:int i:int k:int _1_PROVE:int n:int j:int}
+
+Output in normal notation:
+1. Frame axioms:
+
+2. Output equations:
+i1 = i5(_N1)
+k1 = 100
+b1 = b5(_N1)
+j1 = j5(_N1)
+n1 = (2*_N1)
+
+3. Other axioms:
+i5((_n1+1)) = ite((b5(_n1)>0),(i5(_n1)+1),i5(_n1))
+b5((_n1+1)) = not b5(_n1)
+j5((_n1+1)) = ite((b5(_n1)>0),j5(_n1),(j5(_n1)+1))
+i5(0) = __VERIFIER_nondet_int2
+b5(0) = __VERIFIER_nondet_int3
+j5(0) = __VERIFIER_nondet_int2
+(_N1>=100)
+(_n1<_N1) -> ((2*_n1)<(2*100))
+
+4. Assumption :
+
+5. Assertion :
+(i5(_N1)==j5(_N1))

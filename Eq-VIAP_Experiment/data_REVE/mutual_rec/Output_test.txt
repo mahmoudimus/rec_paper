@@ -1,0 +1,84 @@
+Program Body
+{
+  int _1_PROVE = 0;
+  int p1l;
+  int p1m;
+  int p1x;
+  p1x = 1;
+  int p1y;
+  p1y = 1;
+  int p2l;
+  int p2m;
+  int p2x;
+  p2x = 2;
+  int p2y;
+  p2y = 2;
+  while (__VERIFIER_nondet_int() > 0)
+  {
+    p1l = p1x;
+    p1m = p1y;
+    p1x = p1l + p1m;
+    p1y = p1l + p1m;
+  }
+
+  while (__VERIFIER_nondet_int() > 0)
+  {
+    p2l = p2x;
+    p2m = p2y;
+    p2x = p2l + p2m;
+    p2y = p2l + p2m;
+  }
+
+  p2x = p2x / 2;
+  p2y = p2y / 2;
+  _1_PROVE = p1x == p2x;
+}
+
+Function Name:
+main
+Return Type:
+int
+Input Variables:
+{}
+Local Variables:
+{ p2m:int p2l:int _1_PROVE:int p1l:int p1m:int p1x:int p1y:int p2y:int p2x:int}
+
+Output in normal notation:
+1. Frame axioms:
+
+2. Output equations:
+p2m1 = p2m8(_N2)
+p2l1 = p2l8(_N2)
+p1l1 = p1l4(_N1)
+p1m1 = p1m4(_N1)
+p1x1 = ite(_N1==0,1,2^_N1)
+p1y1 = ite(_N1==0,1,2^_N1)
+p2y1 = ite(_N2==0,1,2^_N2)
+p2x1 = ite(_N2==0,1,2^_N2)
+
+3. Other axioms:
+p1l4((_n1+1)) = ite(_n1==0,1,2^_n1)
+p1m4((_n1+1)) = ite(_n1==0,1,2^_n1)
+p1l4(0) = p1l
+p1m4(0) = p1m
+(0<=-(__VERIFIER_nondet_int2(_N1)))
+(_n1<_N1) -> (__VERIFIER_nondet_int2(_n1)>0)
+p2m8((_n2+1)) = ite(_n2==0,2,2^(_n2+1))
+p2l8((_n2+1)) = ite(_n2==0,2,2^(_n2+1))
+p2m8(0) = p2m
+p2l8(0) = p2l
+(0<=-(__VERIFIER_nondet_int3(_N2)))
+(_n2<_N2) -> (__VERIFIER_nondet_int3(_n2)>0)
+
+4. Assumption :
+__VERIFIER_nondet_int2(_n2)==__VERIFIER_nondet_int3(_n2)
+
+5. Assertion :
+(ite(_N1==0,1,2^_N1)==ite(_N2==0,1,2^_N2))
+
+
+
+Successfully Proved Assertion
+
+Programs are Equivalent
+

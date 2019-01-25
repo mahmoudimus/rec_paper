@@ -1,0 +1,88 @@
+Program Body
+{
+  int RET;
+  RET = 0;
+  int _1_ASSUME;
+  _1_ASSUME = 0;
+  int _2_ASSUME;
+  _2_ASSUME = 0;
+  int _1_PROVE = 0;
+  int c1_var;
+  c1_var = 4000;
+  int c2_var;
+  c2_var = 2000;
+  int n;
+  int v;
+  int i;
+  int k;
+  int j;
+  n = __VERIFIER_nondet_int();
+  _1_ASSUME = n > 0;
+  _2_ASSUME = n < 10;
+  k = 0;
+  i = 0;
+  while (i < n)
+  {
+    i = i + 1;
+    if ((__VERIFIER_nondet_int() % 2) == 0)
+    {
+      v = 0;
+    }
+    else
+    {
+      v = 1;
+    }
+
+    if (v == 0)
+    {
+      k = k + c1_var;
+    }
+    else
+    {
+      k = k + c2_var;
+    }
+
+  }
+
+  _1_PROVE = k > n;
+  RET = 0;
+}
+
+Function Name:
+main
+Return Type:
+int
+Input Variables:
+{}
+Local Variables:
+{ c2_var:int i:int k:int _1_PROVE:int RET:int n:int _2_ASSUME:int v:int _1_ASSUME:int j:int c1_var:int}
+
+Output in normal notation:
+1. Frame axioms:
+j1 = j
+
+2. Output equations:
+i1 = (_N1+0)
+k1 = k7(_N1)
+c2_var1 = 2000
+main = 0
+n1 = __VERIFIER_nondet_int2
+v1 = v7(_N1)
+c1_var1 = 4000
+
+3. Other axioms:
+k7((_n1+1)) = ite((ite(((__VERIFIER_nondet_int3(_n1)%2)==0),0,1)==0),(k7(_n1)+4000),(k7(_n1)+2000))
+v7((_n1+1)) = ite(((__VERIFIER_nondet_int3(_n1)%2)==0),0,1)
+k7(0) = 0
+v7(0) = v
+(_N1>=(-(0)+__VERIFIER_nondet_int2))
+(_n1<_N1) -> ((_n1+0)<__VERIFIER_nondet_int2)
+
+4. Assumption :
+(__VERIFIER_nondet_int2<10)
+(__VERIFIER_nondet_int2>0)
+
+5. Assertion :
+(k7(_N1)>__VERIFIER_nondet_int2)
+Strategy applied 1
+VIAP_STANDARD_OUTPUT_True

@@ -1,0 +1,64 @@
+Program Body
+{
+  int LARGE_INT;
+  int _1_PROVE = 0;
+  int _2_PROVE = 0;
+  int x;
+  x = 0;
+  int y;
+  y = 0;
+  int z;
+  z = 0;
+  int k;
+  k = 0;
+  while ((y <= LARGE_INT) && (__VERIFIER_nondet_int() > 0))
+  {
+    if ((k % 3) == 0)
+      x = x + 1;
+
+    y = y + 1;
+    z = z + 1;
+    k = (x + y) + z;
+  }
+
+  _1_PROVE = x == y;
+  _2_PROVE = y == z;
+}
+
+Function Name:
+main
+Return Type:
+int
+Input Variables:
+{}
+Local Variables:
+{ LARGE_INT:int k:int _1_PROVE:int y:int x:int z:int _2_PROVE:int}
+
+Output in normal notation:
+1. Frame axioms:
+LARGE_INT1 = LARGE_INT
+
+2. Output equations:
+y1 = (_N1+0)
+x1 = x5(_N1)
+k1 = k5(_N1)
+z1 = (_N1+0)
+
+3. Other axioms:
+x5((_n1+1)) = ite(((k5(_n1)%3)==0),(x5(_n1)+1),x5(_n1))
+k5((_n1+1)) = ((ite(((k5(_n1)%3)==0),(x5(_n1)+1),x5(_n1))+((_n1+0)+1))+((_n1+0)+1))
+x5(0) = 0
+k5(0) = 0
+(((_N1+0)>LARGE_INT) or (__VERIFIER_nondet_int2(_N1)<=0))
+(_n1<_N1) -> (((_n1+0)<=LARGE_INT) and (__VERIFIER_nondet_int2(_n1)>0))
+
+4. Assumption :
+
+5. Assertion :
+(x5(_N1)==(_N1+0))
+((_N1+0)==(_N1+0))
+Strategy applied 1
+Strategy applied 2
+Strategy applied 3
+Strategy applied 1
+VIAP_STANDARD_OUTPUT_True

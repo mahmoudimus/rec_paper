@@ -1,0 +1,91 @@
+Program Body
+{
+  int LARGE_INT;
+  int _1_PROVE = 0;
+  int t;
+  t = 0;
+  int s;
+  s = 0;
+  int a;
+  a = 0;
+  int b;
+  b = 0;
+  int flag;
+  while ((t < LARGE_INT) && (__VERIFIER_nondet_int() > 0))
+  {
+    a = a + 1;
+    b = b + 1;
+    s = s + a;
+    t = t + b;
+    if (flag > 0)
+    {
+      t = t + a;
+    }
+
+  }
+
+  int x;
+  x = 1;
+  if (flag > 0)
+  {
+    x = (t - (2 * s)) + 2;
+  }
+
+  int y;
+  y = 0;
+  while (y <= x)
+  {
+    if (__VERIFIER_nondet_int() > 0)
+      y = y + 1;
+    else
+    {
+      y = y + 2;
+    }
+
+  }
+
+  _1_PROVE = y <= 4;
+}
+
+Function Name:
+main
+Return Type:
+int
+Input Variables:
+{}
+Local Variables:
+{ a:int LARGE_INT:int b:int _1_PROVE:int flag:int s:int t:int y:int x:int}
+
+Output in normal notation:
+1. Frame axioms:
+LARGE_INT1 = LARGE_INT
+flag1 = flag
+
+2. Output equations:
+a1 = (_N1+0)
+b1 = (_N1+0)
+s1 = ((((((2*_N1)*0)+_N1)+(2*0))+(_N1**2))/2)
+t1 = t6(_N1)
+y1 = y10(_N2)
+x1 = ite((flag>0),((t6(_N1)-(2*((((((2*_N1)*0)+_N1)+(2*0))+(_N1**2))/2)))+2),1)
+
+3. Other axioms:
+t6((_n1+1)) = ite((flag>0),((t6(_n1)+((_n1+0)+1))+((_n1+0)+1)),(t6(_n1)+((_n1+0)+1)))
+t6(0) = 0
+((t6(_N1)>=LARGE_INT) or (__VERIFIER_nondet_int2(_N1)<=0))
+(_n1<_N1) -> ((t6(_n1)<LARGE_INT) and (__VERIFIER_nondet_int2(_n1)>0))
+y10((_n2+1)) = ite((__VERIFIER_nondet_int3(_n2)>0),(y10(_n2)+1),(y10(_n2)+2))
+y10(0) = 0
+(y10(_N2)>ite((flag>0),((t6(_N1)-(2*((((((2*_N1)*0)+_N1)+(2*0))+(_N1**2))/2)))+2),1))
+(_n2<_N2) -> (y10(_n2)<=ite((flag>0),((t6(_N1)-(2*((((((2*_N1)*0)+_N1)+(2*0))+(_N1**2))/2)))+2),1))
+
+4. Assumption :
+
+5. Assertion :
+(y10(_N2)<=4)
+Strategy applied 1
+Strategy applied 2
+Strategy applied 3
+Strategy applied 4
+Strategy applied 5
+VIAP_STANDARD_OUTPUT_True

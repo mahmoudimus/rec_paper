@@ -1,0 +1,59 @@
+Program Body
+{
+  int RET;
+  RET = 0;
+  int _1_ASSUME;
+  _1_ASSUME = 0;
+  int _2_ASSUME;
+  _2_ASSUME = 0;
+  int _1_PROVE = 0;
+  int n;
+  int i;
+  int k;
+  int j;
+  n = __VERIFIER_nondet_int();
+  k = __VERIFIER_nondet_int();
+  _1_ASSUME = n > 0;
+  _2_ASSUME = k > n;
+  j = 0;
+  while (j < n)
+  {
+    j = j + 1;
+    k = k - 1;
+  }
+
+  _1_PROVE = k >= 0;
+  RET = 0;
+}
+
+Function Name:
+main
+Return Type:
+int
+Input Variables:
+{}
+Local Variables:
+{ j:int i:int k:int _1_PROVE:int RET:int n:int _2_ASSUME:int _1_ASSUME:int}
+
+Output in normal notation:
+1. Frame axioms:
+i1 = i
+
+2. Output equations:
+k1 = (-(_N1)+__VERIFIER_nondet_int3)
+j1 = (_N1+0)
+main = 0
+n1 = __VERIFIER_nondet_int2
+
+3. Other axioms:
+(_N1>=(-(0)+__VERIFIER_nondet_int2))
+(_n1<_N1) -> ((_n1+0)<__VERIFIER_nondet_int2)
+
+4. Assumption :
+(__VERIFIER_nondet_int3>__VERIFIER_nondet_int2)
+(__VERIFIER_nondet_int2>0)
+
+5. Assertion :
+((-(_N1)+__VERIFIER_nondet_int3)>=0)
+Strategy applied 1
+VIAP_STANDARD_OUTPUT_True

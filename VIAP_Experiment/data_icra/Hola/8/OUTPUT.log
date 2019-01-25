@@ -1,0 +1,95 @@
+Program Body
+{
+  int LARGE_INT;
+  int break_1_flag;
+  break_1_flag = 0;
+  int RET;
+  RET = 0;
+  int _1_PROVE = 0;
+  int i;
+  int pvlen;
+  int t;
+  int k;
+  k = 0;
+  int n;
+  i = 0;
+  pvlen = __VERIFIER_nondet_int();
+  while ((i < LARGE_INT) && (__VERIFIER_nondet_int() > 0))
+  {
+    i = i + 1;
+  }
+
+  if (i > pvlen)
+  {
+    pvlen = i;
+  }
+
+  i = 0;
+  while ((k < LARGE_INT) && (__VERIFIER_nondet_int() > 0))
+  {
+    t = i;
+    i = i + 1;
+    k = k + 1;
+  }
+
+  int j;
+  j = 0;
+  n = i;
+  while ((1 > 0) && (break_1_flag == 0))
+  {
+    break_1_flag = 0;
+    _1_PROVE = k >= 0;
+    k = k - 1;
+    i = i - 1;
+    j = j + 1;
+    if (j >= n)
+    {
+      break_1_flag = 1;
+    }
+
+  }
+
+  RET = 0;
+}
+
+Function Name:
+main
+Return Type:
+int
+Input Variables:
+{}
+Local Variables:
+{ LARGE_INT:int j:int pvlen:int i:int k:int _1_PROVE:int RET:int n:int t:int break_1_flag:int}
+
+Output in normal notation:
+1. Frame axioms:
+LARGE_INT1 = LARGE_INT
+
+2. Output equations:
+break_1_flag1 = break_1_flag13(_N3)
+i1 = (-(_N3)+(_N2+0))
+k1 = (-(_N3)+(_N2+0))
+j1 = (_N3+0)
+main = 0
+n1 = (_N2+0)
+t1 = t6(_N2)
+pvlen1 = ite(((_N1+0)>__VERIFIER_nondet_int2),(_N1+0),__VERIFIER_nondet_int2)
+
+3. Other axioms:
+(((_N1+0)>=LARGE_INT) or (__VERIFIER_nondet_int3(_N1)<=0))
+(_n1<_N1) -> (((_n1+0)<LARGE_INT) and (__VERIFIER_nondet_int3(_n1)>0))
+t6((_n2+1)) = (_n2+0)
+t6(0) = t
+(((_N2+0)>=LARGE_INT) or (__VERIFIER_nondet_int4(_N2)<=0))
+(_n2<_N2) -> (((_n2+0)<LARGE_INT) and (__VERIFIER_nondet_int4(_n2)>0))
+break_1_flag13((_n3+1)) = ite((((_n3+0)+1)>=(_N2+0)),1,0)
+break_1_flag13(0) = 0
+((1<=0) or (break_1_flag13(_N3)!=0))
+(_n3<_N3) -> ((1>0) and (break_1_flag13(_n3)==0))
+
+4. Assumption :
+
+5. Assertion :
+((-(_n3)+(_N2+0))>=0)
+Strategy applied 1
+VIAP_STANDARD_OUTPUT_True

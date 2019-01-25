@@ -1,0 +1,55 @@
+pritom@pritom-VirtualBox:~/mainDev/viap_new$ ./viap_tool.py --spec=ReachSafety.prp Hola/37.c
+Program Body
+{
+  int _1_PROVE = 0;
+  int n;
+  n = __VERIFIER_nondet_int();
+  int x;
+  x = 0;
+  int m;
+  m = 0;
+  while (x < n)
+  {
+    if (__VERIFIER_nondet_int() > 0)
+    {
+      m = x;
+    }
+
+    x = x + 1;
+  }
+
+  if (n > 0)
+  {
+    _1_PROVE = (0 <= m) && (m < n);
+  }
+
+}
+
+Function Name:
+main
+Return Type:
+int
+Input Variables:
+{}
+Local Variables:
+{ x:int _1_PROVE:int m:int n:int}
+
+Output in normal notation:
+1. Frame axioms:
+
+2. Output equations:
+x1 = (_N1+0)
+m1 = m3(_N1)
+n1 = __VERIFIER_nondet_int2
+
+3. Other axioms:
+m3((_n1+1)) = ite((__VERIFIER_nondet_int3(_n1)>0),(_n1+0),m3(_n1))
+m3(0) = 0
+(_N1>=(__VERIFIER_nondet_int2-0))
+(_n1<_N1) -> ((_n1+0)<__VERIFIER_nondet_int2)
+
+4. Assumption :
+
+5. Assertion :
+ite((__VERIFIER_nondet_int2>0),((0<=m3(_N1)) and (m3(_N1)<__VERIFIER_nondet_int2)),0)
+Strategy applied 1

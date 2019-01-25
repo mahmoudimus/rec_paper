@@ -1,0 +1,82 @@
+Program Body
+{
+  int LARGE_INT;
+  int _1_PROVE = 0;
+  int w;
+  w = 1;
+  int z;
+  z = 0;
+  int x;
+  x = 0;
+  int y;
+  y = 0;
+  while (__VERIFIER_nondet_int() > 0)
+  {
+    while (((x <= LARGE_INT) && (y <= LARGE_INT)) && (__VERIFIER_nondet_int() > 0))
+    {
+      if ((w % 2) == 1)
+        x = x + 1;
+
+      if ((z % 2) == 0)
+        y = y + 1;
+
+    }
+
+    while ((w <= LARGE_INT) && (__VERIFIER_nondet_int() > 0))
+    {
+      z = x + y;
+      w = z + 1;
+    }
+
+  }
+
+  _1_PROVE = x == y;
+}
+
+Function Name:
+main
+Return Type:
+void
+Input Variables:
+{}
+Local Variables:
+{ LARGE_INT:int _1_PROVE:int w:int y:int x:int z:int}
+
+Output in normal notation:
+1. Frame axioms:
+LARGE_INT1 = LARGE_INT
+
+2. Output equations:
+y1 = y8(_N3)
+x1 = x8(_N3)
+z1 = z8(_N3)
+w1 = w8(_N3)
+
+3. Other axioms:
+y4((_n1+1),_n3) = ite(((z8(_n3)%2)==0),(y4(_n1,_n3)+1),y4(_n1,_n3))
+x4((_n1+1),_n3) = ite(((w8(_n3)%2)==1),(x4(_n1,_n3)+1),x4(_n1,_n3))
+y4(0,_n3) = y8(_n3)
+x4(0,_n3) = x8(_n3)
+(((x4(_N1(_n3),_n3)>LARGE_INT) or (y4(_N1(_n3),_n3)>LARGE_INT)) or (__VERIFIER_nondet_int2(_N1(_n3),_n3)<=0))
+(_n1<_N1(_n3)) -> (((x4(_n1,_n3)<=LARGE_INT) and (y4(_n1,_n3)<=LARGE_INT)) and (__VERIFIER_nondet_int2(_n1,_n3)>0))
+z6((_n2+1),_n3) = (x4(_N1(_n3),_n3)+y4(_N1(_n3),_n3))
+w6((_n2+1),_n3) = ((x4(_N1(_n3),_n3)+y4(_N1(_n3),_n3))+1)
+z6(0,_n3) = z8(_n3)
+w6(0,_n3) = w8(_n3)
+((w6(_N2(_n3),_n3)>LARGE_INT) or (__VERIFIER_nondet_int3(_N2(_n3),_n3)<=0))
+(_n2<_N2(_n3)) -> ((w6(_n2,_n3)<=LARGE_INT) and (__VERIFIER_nondet_int3(_n2,_n3)>0))
+y8((_n3+1)) = y4(_N1(_n3),_n3)
+x8((_n3+1)) = x4(_N1(_n3),_n3)
+z8((_n3+1)) = z6(_N2(_n3),_n3)
+w8((_n3+1)) = w6(_N2(_n3),_n3)
+y8(0) = 0
+x8(0) = 0
+z8(0) = 0
+w8(0) = 1
+(0<=-(__VERIFIER_nondet_int4(_N3)))
+(_n3<_N3) -> (__VERIFIER_nondet_int4(_n3)>0)
+
+4. Assumption :
+
+5. Assertion :
+(x8(_N3)==y8(_N3))

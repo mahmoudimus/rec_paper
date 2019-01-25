@@ -1,0 +1,90 @@
+Program Body
+{
+  int _1_ASSUME;
+  _1_ASSUME = 0;
+  int _1_PROVE = 0;
+  int _2_PROVE = 0;
+  int _3_PROVE = 0;
+  int x;
+  int y;
+  int k;
+  int j;
+  int i;
+  int n;
+  n = __VERIFIER_nondet_int();
+  x = __VERIFIER_nondet_int();
+  y = __VERIFIER_nondet_int();
+  k = __VERIFIER_nondet_int();
+  _1_ASSUME = (x + y) == k;
+  int m;
+  m = 0;
+  j = 0;
+  while (j < n)
+  {
+    if (j == i)
+    {
+      x = x + 1;
+      y = y - 1;
+    }
+    else
+    {
+      y = y + 1;
+      x = x - 1;
+    }
+
+    if (__VERIFIER_nondet_int() > 0)
+    {
+      m = j;
+    }
+
+    j = j + 1;
+  }
+
+  _1_PROVE = (x + y) == k;
+  if (n > 0)
+  {
+    _2_PROVE = 0 <= m;
+    _3_PROVE = m < n;
+  }
+
+}
+
+Function Name:
+main
+Return Type:
+int
+Input Variables:
+{}
+Local Variables:
+{ j:int i:int k:int _1_PROVE:int m:int _3_PROVE:int n:int y:int _1_ASSUME:int x:int _2_PROVE:int}
+
+Output in normal notation:
+1. Frame axioms:
+i1 = i
+
+2. Output equations:
+k1 = __VERIFIER_nondet_int5
+j1 = (_N1+0)
+m1 = m8(_N1)
+n1 = __VERIFIER_nondet_int2
+y1 = y8(_N1)
+x1 = x8(_N1)
+
+3. Other axioms:
+y8((_n1+1)) = ite(((_n1+0)==i),(y8(_n1)-1),(y8(_n1)+1))
+x8((_n1+1)) = ite(((_n1+0)==i),(x8(_n1)+1),(x8(_n1)-1))
+m8((_n1+1)) = ite((__VERIFIER_nondet_int6(_n1)>0),(_n1+0),m8(_n1))
+y8(0) = __VERIFIER_nondet_int4
+x8(0) = __VERIFIER_nondet_int3
+m8(0) = 0
+(_N1>=(-(0)+__VERIFIER_nondet_int2))
+(_n1<_N1) -> ((_n1+0)<__VERIFIER_nondet_int2)
+
+4. Assumption :
+((__VERIFIER_nondet_int3+__VERIFIER_nondet_int4)==__VERIFIER_nondet_int5)
+
+5. Assertion :
+((x8(_N1)+y8(_N1))==__VERIFIER_nondet_int5)
+ite((__VERIFIER_nondet_int2>0),(m8(_N1)<__VERIFIER_nondet_int2),0)
+ite((__VERIFIER_nondet_int2>0),(0<=m8(_N1)),0)
+Strategy applied 1

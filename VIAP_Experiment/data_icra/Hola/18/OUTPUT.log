@@ -1,0 +1,58 @@
+Program Body
+{
+  int _1_PROVE = 0;
+  int flag;
+  flag = __VERIFIER_nondet_int();
+  int a;
+  a = __VERIFIER_nondet_int();
+  int b;
+  int j;
+  j = 0;
+  b = 0;
+  while (b < 100)
+  {
+    if (flag > 0)
+    {
+      j = j + 1;
+    }
+
+    b = b + 1;
+  }
+
+  if (flag > 0)
+  {
+    _1_PROVE = j == 100;
+  }
+
+}
+
+Function Name:
+main
+Return Type:
+int
+Input Variables:
+{}
+Local Variables:
+{ a:int flag:int _1_PROVE:int b:int j:int}
+
+Output in normal notation:
+1. Frame axioms:
+
+2. Output equations:
+a1 = __VERIFIER_nondet_int3
+flag1 = __VERIFIER_nondet_int2
+b1 = (_N1+0)
+j1 = j3(_N1)
+
+3. Other axioms:
+j3((_n1+1)) = ite((__VERIFIER_nondet_int2>0),(j3(_n1)+1),j3(_n1))
+j3(0) = 0
+(_N1>=(-(0)+100))
+(_n1<_N1) -> ((_n1+0)<100)
+
+4. Assumption :
+
+5. Assertion :
+ite((__VERIFIER_nondet_int2>0),(j3(_N1)==100),0)
+Strategy applied 1
+VIAP_STANDARD_OUTPUT_True

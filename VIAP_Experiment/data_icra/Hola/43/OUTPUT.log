@@ -1,0 +1,67 @@
+Program Body
+{
+  int RET;
+  RET = 0;
+  int _1_PROVE = 0;
+  int x;
+  x = __VERIFIER_nondet_int();
+  int y;
+  y = __VERIFIER_nondet_int();
+  int i;
+  i = 0;
+  int t;
+  t = y;
+  if (x == y)
+  {
+    RET = x;
+  }
+
+  if (x != y)
+  {
+    while (__VERIFIER_nondet_int() > 0)
+    {
+      if (x > 0)
+      {
+        y = y + x;
+      }
+
+    }
+
+    _1_PROVE = y >= t;
+  }
+
+}
+
+Function Name:
+main
+Return Type:
+int
+Input Variables:
+{}
+Local Variables:
+{ i:int _1_PROVE:int RET:int t:int y:int x:int}
+
+Output in normal notation:
+1. Frame axioms:
+
+2. Output equations:
+i1 = 0
+y1 = ite((__VERIFIER_nondet_int2!=__VERIFIER_nondet_int3),y3(_N1),__VERIFIER_nondet_int3)
+t1 = __VERIFIER_nondet_int3
+main = ite((__VERIFIER_nondet_int2==__VERIFIER_nondet_int3),__VERIFIER_nondet_int2,0)
+x1 = __VERIFIER_nondet_int2
+
+3. Other axioms:
+y3((_n1+1)) = ite((__VERIFIER_nondet_int2>0),(y3(_n1)+__VERIFIER_nondet_int2),y3(_n1))
+y3(0) = __VERIFIER_nondet_int3
+(0<=-(__VERIFIER_nondet_int4(_N1)))
+(_n1<_N1) -> (__VERIFIER_nondet_int4(_n1)>0)
+
+4. Assumption :
+
+5. Assertion :
+ite((__VERIFIER_nondet_int2!=__VERIFIER_nondet_int3),(y3(_N1)>=__VERIFIER_nondet_int3),0)
+Strategy applied 1
+Strategy applied 2
+Strategy applied 3
+VIAP_STANDARD_OUTPUT_True

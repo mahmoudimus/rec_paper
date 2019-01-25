@@ -1,0 +1,83 @@
+Program Body
+{
+  int _1_PROVE = 0;
+  int i;
+  int j;
+  int k;
+  int flag;
+  flag = __VERIFIER_nondet_int();
+  j = 1;
+  if (flag > 0)
+  {
+    i = 0;
+  }
+  else
+  {
+    i = 1;
+  }
+
+  while (__VERIFIER_nondet_int() > 0)
+  {
+    i = i + 2;
+    if ((i % 2) == 0)
+    {
+      j = j + 2;
+    }
+
+  }
+
+  int a;
+  a = 0;
+  int b;
+  b = 0;
+  while (__VERIFIER_nondet_int() > 0)
+  {
+    a = a + 1;
+    b = b + (j - i);
+  }
+
+  if (flag > 0)
+  {
+    _1_PROVE = a == b;
+  }
+
+}
+
+Function Name:
+main
+Return Type:
+int
+Input Variables:
+{}
+Local Variables:
+{ a:int j:int i:int k:int _1_PROVE:int flag:int b:int}
+
+Output in normal notation:
+1. Frame axioms:
+k1 = k
+
+2. Output equations:
+a1 = (_N2+0)
+i1 = ((2*_N1)+ite((__VERIFIER_nondet_int2>0),0,1))
+flag1 = __VERIFIER_nondet_int2
+b1 = (((-(_N2)*((2*_N1)+ite((__VERIFIER_nondet_int2>0),0,1)))+(_N2*j5(_N1)))+0)
+j1 = j5(_N1)
+
+3. Other axioms:
+j5((_n1+1)) = ite((((((2*_n1)+ite((__VERIFIER_nondet_int2>0),0,1))+2)%2)==0),(j5(_n1)+2),j5(_n1))
+j5(0) = 1
+(0<=-(__VERIFIER_nondet_int3(_N1)))
+(_n1<_N1) -> (__VERIFIER_nondet_int3(_n1)>0)
+(0<=-(__VERIFIER_nondet_int4(_N2)))
+(_n2<_N2) -> (__VERIFIER_nondet_int4(_n2)>0)
+
+4. Assumption :
+
+5. Assertion :
+ite((__VERIFIER_nondet_int2>0),((_N2+0)==(((-(_N2)*((2*_N1)+ite((__VERIFIER_nondet_int2>0),0,1)))+(_N2*j5(_N1)))+0)),0)
+Strategy applied 1
+Strategy applied 2
+Strategy applied 3
+Strategy applied 4
+Strategy applied 5
+VIAP_STANDARD_OUTPUT_True

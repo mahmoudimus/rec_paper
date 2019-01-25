@@ -1,0 +1,72 @@
+Program Body
+{
+  int _1_ASSUME;
+  _1_ASSUME = 0;
+  int _1_PROVE = 0;
+  int p1z;
+  int p1y;
+  p1y = 0;
+  int p1x;
+  p1x = 1;
+  int p2z;
+  int p2y;
+  p2y = 0;
+  int p2x;
+  p2x = 1;
+  _1_ASSUME = p1z == p2z;
+  while (p1x < 10)
+  {
+    p1y = 2 + p1x;
+    p1x = p1y + p1y;
+  }
+
+  while (p2x <= 9)
+  {
+    p2y = p2x + 2;
+    p2x = 2 * p2y;
+  }
+
+  _1_PROVE = (p1x * 2) == (2 * p2x);
+}
+
+Function Name:
+main
+Return Type:
+int
+Input Variables:
+{}
+Local Variables:
+{ _1_PROVE:int p1x:int _1_ASSUME:int p1y:int p1z:int p2y:int p2x:int p2z:int}
+
+Output in normal notation:
+1. Frame axioms:
+p1z1 = p1z
+p2z1 = p2z
+
+2. Output equations:
+p1x1 = ((((2**_N1)*1)+(2**(_N1+2)))-4)
+p1y1 = p1y2(_N1)
+p2y1 = p2y4(_N2)
+p2x1 = ((((2**_N2)*1)+(2**(_N2+2)))-4)
+
+3. Other axioms:
+p1y2((_n1+1)) = (2+((((2**_n1)*1)+(2**(_n1+2)))-4))
+p1y2(0) = 0
+(((((2**_N1)*1)+(2**(_N1+2)))-4)>=10)
+(_n1<_N1) -> (((((2**_n1)*1)+(2**(_n1+2)))-4)<10)
+p2y4((_n2+1)) = (((((2**_n2)*1)+(2**(_n2+2)))-4)+2)
+p2y4(0) = 0
+(((((2**_N2)*1)+(2**(_N2+2)))-4)>9)
+(_n2<_N2) -> (((((2**_n2)*1)+(2**(_n2+2)))-4)<=9)
+
+4. Assumption :
+(p1z==p2z)
+
+5. Assertion :
+((((((2**_N1)*1)+(2**(_N1+2)))-4)*2)==(2*((((2**_N2)*1)+(2**(_N2+2)))-4)))
+
+
+
+Successfully Proved Assertion
+
+Programs are Equivalent

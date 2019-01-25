@@ -1,0 +1,63 @@
+Program Body
+{
+  int _1_ASSUME;
+  _1_ASSUME = 0;
+  int _1_PROVE = 0;
+  int p1n;
+  int p2n;
+  int p1m;
+  p1m = 0;
+  int p2m;
+  p2m = 0;
+  _1_ASSUME = p1n == p2n;
+  while (p1n >= 0)
+  {
+    p1m = p1m + 1;
+    p1n = p1n - 1;
+  }
+
+  while (p2n > 0)
+  {
+    p2m = p2m + 1;
+    p2n = p2n - 1;
+  }
+
+  _1_PROVE = p1m == (p2m + 1);
+}
+
+Function Name:
+main
+Return Type:
+int
+Input Variables:
+{}
+Local Variables:
+{ p2n:int p2m:int _1_PROVE:int p1m:int p1n:int _1_ASSUME:int}
+
+Output in normal notation:
+1. Frame axioms:
+
+2. Output equations:
+p2m1 = (_N2+0)
+p2n1 = p2n-_N2
+p1m1 = (_N1+0)
+p1n1 = p1n-_N1
+
+3. Other axioms:
+(p1n-_N1<0)
+(_n1<_N1) -> (p1n-_n1>=0)
+(0<=-(p2n-_N2))
+(_n2<_N2) -> (p2n-_n2)>0
+
+4. Assumption :
+(p1n==p2n)
+
+5. Assertion :
+((_N1+0)==((_N2+0)+1))
+
+
+
+Successfully Proved Assertion
+
+Programs are Equivalent
+

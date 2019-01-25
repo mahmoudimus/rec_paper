@@ -1,0 +1,83 @@
+Program Body
+{
+  int _1_PROVE = 0;
+  int a;
+  a = 1;
+  int b;
+  b = 1;
+  int c;
+  c = 2;
+  int d;
+  d = 2;
+  int x;
+  x = 3;
+  int y;
+  y = 3;
+  while (__VERIFIER_nondet_int() > 0)
+  {
+    x = a + c;
+    y = b + d;
+    if (((x + y) % 2) == 0)
+    {
+      a = a + 1;
+      d = d + 1;
+    }
+    else
+    {
+      a = a - 1;
+    }
+
+    while (__VERIFIER_nondet_int() > 0)
+    {
+      c = c - 1;
+      b = b - 1;
+    }
+
+  }
+
+  _1_PROVE = (a + c) == (b + d);
+}
+
+Function Name:
+main
+Return Type:
+int
+Input Variables:
+{}
+Local Variables:
+{ a:int c:int b:int d:int _1_PROVE:int y:int x:int}
+
+Output in normal notation:
+1. Frame axioms:
+
+2. Output equations:
+a1 = a9(_N2)
+c1 = c9(_N2)
+b1 = b9(_N2)
+d1 = d9(_N2)
+y1 = y9(_N2)
+x1 = x9(_N2)
+
+3. Other axioms:
+(0<=-(__VERIFIER_nondet_int2(_N1(_n2),_n2)))
+(_n1<_N1(_n2)) -> (__VERIFIER_nondet_int2(_n1,_n2)>0)
+a9((_n2+1)) = ite(((((a9(_n2)+c9(_n2))+(b9(_n2)+d9(_n2)))%2)==0),(a9(_n2)+1),(a9(_n2)-1))
+c9((_n2+1)) = (-(_N1(_n2))+c9(_n2))
+b9((_n2+1)) = (-(_N1(_n2))+b9(_n2))
+d9((_n2+1)) = ite(((((a9(_n2)+c9(_n2))+(b9(_n2)+d9(_n2)))%2)==0),(d9(_n2)+1),d9(_n2))
+y9((_n2+1)) = (b9(_n2)+d9(_n2))
+x9((_n2+1)) = (a9(_n2)+c9(_n2))
+a9(0) = 1
+c9(0) = 2
+b9(0) = 1
+d9(0) = 2
+y9(0) = 3
+x9(0) = 3
+(0<=-(__VERIFIER_nondet_int3(_N2)))
+(_n2<_N2) -> (__VERIFIER_nondet_int3(_n2)>0)
+
+4. Assumption :
+
+5. Assertion :
+((a9(_N2)+c9(_N2))==(b9(_N2)+d9(_N2)))
+Strategy applied 1

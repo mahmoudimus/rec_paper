@@ -1,0 +1,55 @@
+Program Body
+{
+  int LARGE_INT;
+  int _1_PROVE = 0;
+  int x;
+  x = 0;
+  int y;
+  y = 0;
+  int n;
+  n = 0;
+  while ((x < LARGE_INT) && (__VERIFIER_nondet_int() > 0))
+  {
+    x = x + 1;
+    y = y + 1;
+  }
+
+  while (x != n)
+  {
+    x = x - 1;
+    y = y - 1;
+  }
+
+  _1_PROVE = y == n;
+}
+
+Function Name:
+main
+Return Type:
+void
+Input Variables:
+{}
+Local Variables:
+{ y:int x:int LARGE_INT:int _1_PROVE:int n:int}
+
+Output in normal notation:
+1. Frame axioms:
+LARGE_INT1 = LARGE_INT
+
+2. Output equations:
+y1 = (-(_N2)+(_N1+0))
+x1 = (-(_N2)+(_N1+0))
+n1 = 0
+
+3. Other axioms:
+(((_N1+0)>=LARGE_INT) or (__VERIFIER_nondet_int2(_N1)<=0))
+(_n1<_N1) -> (((_n1+0)<LARGE_INT) and (__VERIFIER_nondet_int2(_n1)>0))
+((-(_N2)+(_N1+0))==0)
+(_n2<_N2) -> ((-(_n2)+(_N1+0))!=0)
+
+4. Assumption :
+
+5. Assertion :
+((-(_N2)+(_N1+0))==0)
+Strategy applied 1
+VIAP_STANDARD_OUTPUT_True

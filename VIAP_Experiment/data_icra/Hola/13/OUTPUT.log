@@ -1,0 +1,61 @@
+Program Body
+{
+  int _1_PROVE = 0;
+  int flag;
+  flag = __VERIFIER_nondet_int();
+  int j;
+  j = 2;
+  int k;
+  k = 0;
+  while (__VERIFIER_nondet_int() > 0)
+  {
+    if (flag > 0)
+    {
+      j = j + 4;
+    }
+    else
+    {
+      j = j + 2;
+      k = k + 1;
+    }
+
+  }
+
+  if (k != 0)
+  {
+    _1_PROVE = j == ((2 * k) + 2);
+  }
+
+}
+
+Function Name:
+main
+Return Type:
+int
+Input Variables:
+{}
+Local Variables:
+{ flag:int _1_PROVE:int k:int j:int}
+
+Output in normal notation:
+1. Frame axioms:
+
+2. Output equations:
+flag1 = __VERIFIER_nondet_int2
+j1 = j4(_N1)
+k1 = k4(_N1)
+
+3. Other axioms:
+k4((_n1+1)) = ite((__VERIFIER_nondet_int2>0),k4(_n1),(k4(_n1)+1))
+j4((_n1+1)) = ite((__VERIFIER_nondet_int2>0),(j4(_n1)+4),(j4(_n1)+2))
+k4(0) = 0
+j4(0) = 2
+(0<=-(__VERIFIER_nondet_int3(_N1)))
+(_n1<_N1) -> (__VERIFIER_nondet_int3(_n1)>0)
+
+4. Assumption :
+
+5. Assertion :
+ite((k4(_N1)!=0),(j4(_N1)==((2*k4(_N1))+2)),0)
+Strategy applied 1
+VIAP_STANDARD_OUTPUT_True

@@ -1,0 +1,119 @@
+Program Body
+{
+  int _1_ASSUME;
+  _1_ASSUME = 0;
+  int _1_PROVE = 0;
+  int p1n;
+  int p1result;
+  p1result = 0;
+  int p1prev;
+  p1prev = 1;
+  int p1cur;
+  p1cur = 0;
+  int p1sum;
+  int p2n;
+  int p2result;
+  p2result = 0;
+  int p2count1_var;
+  p2count1_var = 1;
+  int p2count2_var;
+  p2count2_var = 1;
+  int p2temp;
+  _1_ASSUME = p1n == p2n;
+  if (p1n <= 1)
+  {
+    p1result = 1;
+  }
+  else
+  {
+    p1sum = 2;
+    int p1i;
+    p1i = 2;
+    while (p1i < p1n)
+    {
+      p1cur = p1sum;
+      p1sum = p1sum + p1prev;
+      p1prev = p1cur;
+      p1i = p1i + 1;
+    }
+
+    p1result = p1sum;
+  }
+
+  if (p2n <= 1)
+  {
+    p2result = 1;
+  }
+  else
+  {
+    int p2i;
+    p2i = 2;
+    while (p2i < p2n)
+    {
+      p2temp = p2count2_var;
+      p2count2_var = p2temp + p2count1_var;
+      p2count1_var = p2temp;
+      p2i = p2i + 1;
+    }
+
+    p2result = p2count2_var;
+  }
+
+  _1_PROVE = p1result == p2result;
+}
+
+Function Name:
+main
+Return Type:
+int
+Input Variables:
+{}
+Local Variables:
+{ p2n:int p1result:int p1sum:int p1cur:int p1i:int p2temp:int _1_PROVE:int p2i:int p2result:int p1n:int p2count2_var:int _1_ASSUME:int p2count1_var:int p1prev:int}
+
+Output in normal notation:
+1. Frame axioms:
+p2n1 = p2n
+p1n1 = p1n
+
+2. Output equations:
+p1result1 = ite((p1n<=1),1,p1sum4(_N1))
+p1sum1 = ite((p1n<=1),p1sum,p1sum4(_N1))
+p1cur1 = ite((p1n<=1),0,p1cur4(_N1))
+p1i1 = ite((p1n<=1),p1i,(_N1+2))
+p2temp1 = ite((p2n<=1),p2temp,p2temp13(_N2))
+p2i1 = ite((p2n<=1),p2i,(_N2+2))
+p2result1 = ite((p2n<=1),1,p2count2_var13(_N2))
+p2count2_var1 = ite((p2n<=1),1,p2count2_var13(_N2))
+p2count1_var1 = ite((p2n<=1),1,p2count1_var13(_N2))
+p1prev1 = ite((p1n<=1),1,p1prev4(_N1))
+
+3. Other axioms:
+p1cur4((_n1+1)) = p1sum4(_n1)
+p1prev4((_n1+1)) = p1sum4(_n1)
+p1sum4((_n1+1)) = (p1sum4(_n1)+p1prev4(_n1))
+p1cur4(0) = 0
+p1prev4(0) = 1
+p1sum4(0) = 2
+(_N1>=(-(2)+p1n))
+(_n1<_N1) -> ((_n1+2)<p1n)
+p2count1_var13((_n2+1)) = p2count2_var13(_n2)
+p2temp13((_n2+1)) = p2count2_var13(_n2)
+p2count2_var13((_n2+1)) = (p2count2_var13(_n2)+p2count1_var13(_n2))
+p2count1_var13(0) = 1
+p2temp13(0) = p2temp
+p2count2_var13(0) = 1
+(_N2>=(-(2)+p2n))
+(_n2<_N2) -> ((_n2+2)<p2n)
+
+4. Assumption :
+(p1n==p2n)
+
+5. Assertion :
+(ite((p1n<=1),1,p1sum4(_N1))==ite((p2n<=1),1,p2count2_var13(_N2)))
+
+
+Failed to Proved Assertion
+
+Programs are not Equivalent
+

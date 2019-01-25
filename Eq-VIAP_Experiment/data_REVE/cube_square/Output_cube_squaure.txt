@@ -1,0 +1,73 @@
+Program Body
+{
+  int _1_ASSUME;
+  _1_ASSUME = 0;
+  int _1_PROVE = 0;
+  int p1n;
+  int p1r;
+  p1r = 0;
+  int p1i;
+  p1i = p1n;
+  int p2n;
+  int p2r;
+  p2r = 0;
+  int p2i;
+  p2i = p2n;
+  _1_ASSUME = p1n == p2n;
+  while (p1i > 0)
+  {
+    p1r = p1r + p1n;
+    p1i = p1i - 1;
+  }
+
+  p1i = p1n;
+  p1n = p1r;
+  p1r = 0;
+  while (p1i > 0)
+  {
+    p1r = p1r + p1n;
+    p1i = p1i - 1;
+  }
+
+  while (p2i > 0)
+  {
+    p2r = p2r + p2n;
+    p2i = p2i - 1;
+  }
+
+  _1_PROVE = p1r == p2r;
+}
+
+Function Name:
+main
+Return Type:
+int
+Input Variables:
+{}
+Local Variables:
+{ p2n:int p1i:int _1_PROVE:int p2i:int p1n:int p1r:int p2r:int _1_ASSUME:int}
+
+Output in normal notation:
+1. Frame axioms:
+p2n1 = p2n
+
+2. Output equations:
+p1i1 = p1n-_N2)
+p1r1 = ((_N2*((p1n)+0))+0)
+p2i1 = p2n-_N3)
+p1n1 = ((_N1*p1n)+0)
+p2r1 = ((_N3*p2n)+0)
+
+3. Other axioms:
+(0<=-(p1n-_N1))
+(_n1<_N1) -> (p1n-_n1>0)
+(0<=-(p1n-_N2))
+(_n2<_N2) -> (p1n-_n2>0)
+(0<=-(p2n-_N3))
+(_n3<_N3) -> (p2i6(_n3)>0)
+
+4. Assumption :
+(p1n==p2n)
+
+5. Assertion :
+(((_N2*((p1n)+0))+0)==((_N3*p2n)+0))
