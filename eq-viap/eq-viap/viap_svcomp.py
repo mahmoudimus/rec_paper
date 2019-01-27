@@ -8335,10 +8335,11 @@ def prove_auto_process(program,property,program_analysis,program_analysis_decl):
                 if main_status is "True":
                     print 'VIAP_STANDARD_OUTPUT_True'
                     if rec_program==False:
-                        if '=' in property:
-                            value_names=property.split('=')
-                            fd = open(value_names[1])
-                            property = "".join(fd.readlines())
+                        if property is not None:
+                            if '=' in property:
+                                value_names=property.split('=')
+                                fd = open(value_names[1])
+                                property = "".join(fd.readlines())
                         else:
                             property="CHECK( init(main()), LTL(G ! call(__VERIFIER_error())) )"
             
@@ -25083,6 +25084,7 @@ def getVersion():
 
 
 def prove_auto(file_name,property=None):
+        
 	if not(os.path.exists(file_name)): 
         	print "File not exits"
 		return
@@ -26085,7 +26087,9 @@ def prove_auto(file_name,property=None):
                                     
                                     result=AssetionAnalysis3(program_analysis3,program_analysis_decl,file_name,property)
                                     
-                           
+                                    print '~~~~~~~~~~~~~~~~~~~~~~~~~~'
+                                    print property
+                                    print '~~~~~~~~~~~~~~~~~~~~~~~~~~'
                                     
                                     if result is not None:
                                             writtingFile( "errorWitness.graphml" , result )
